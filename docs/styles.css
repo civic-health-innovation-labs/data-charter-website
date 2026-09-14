@@ -312,7 +312,7 @@ body.menu-open { overflow: hidden; }
 .petal-cluster .petal { position: absolute; }
 /* Two overlapping petals in logo proportions — one horizontal, one turned 90deg */
 .petal-cluster .petal:nth-child(1) { left: 0; top: 18%; width: 100%; aspect-ratio: 2.1 / 1; }
-.petal-cluster .petal:nth-child(2) { left: 30%; top: 0; width: 47.6%; aspect-ratio: 1 / 2.1; border-radius: 0 100% 0 100% / 0 47.6% 0 47.6%; }
+.petal-cluster .petal:nth-child(2) { left: 40%; top: 0; width: 47.6%; aspect-ratio: 1 / 2.1; border-radius: 0 100% 0 100% / 0 47.6% 0 47.6%; }
 
 /* ===== Overview ===== */
 .overview {
