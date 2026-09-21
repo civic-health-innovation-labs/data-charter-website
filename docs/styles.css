@@ -733,6 +733,79 @@ body.menu-open { overflow: hidden; }
   font-weight: 500;
 }
 
+/* ===== News ===== */
+.news {
+  background: var(--cream);
+  border-top: 1px solid rgba(39, 66, 113, 0.10);
+}
+.news-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: clamp(2.25rem, 5vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .news-inner { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr); }
+}
+.news-badge {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 360px);
+}
+/* Petal accents, echoing the CTA cards */
+.news-badge::before,
+.news-badge::after {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  /* The CDC petal, as in .petal */
+  border-radius: 0 47.6% 0 47.6% / 0 100% 0 100%;
+}
+.news-badge::before {
+  left: -34px; bottom: -34px;
+  width: 168px; height: 80px;
+  background: var(--yellow);
+}
+.news-badge::after {
+  right: -30px; top: -30px;
+  width: 126px; height: 60px;
+  background: var(--blush);
+}
+.news-badge img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 18px 44px rgba(26, 46, 81, 0.20);
+}
+.news-body h2 { margin-bottom: 0.5em; }
+.news-body p { color: var(--muted); font-size: 1.05rem; }
+.news-body strong { color: var(--blue); font-weight: 700; }
+.news-cta { margin-bottom: 0; }
+.news-cta a {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: .95rem 1.4rem;
+  border-radius: 999px;
+  border: 0;
+  font-weight: 700;
+  letter-spacing: .02em;
+  transition: transform .25s var(--ease), background .25s var(--ease), color .25s var(--ease);
+}
+.news-cta a:hover {
+  transform: translateY(-2px);
+  background: var(--yellow);
+  color: var(--blue);
+  opacity: 1;
+}
+@media (max-width: 540px) {
+  .news-badge { width: min(100%, 300px); }
+  .news-badge::before { left: -18px; bottom: -18px; width: 118px; height: 56px; }
+  .news-badge::after  { right: -16px; top: -16px; width: 92px; height: 44px; }
+}
+
 /* ===== Footer ===== */
 .site-footer {
   background: var(--blue-deep);
