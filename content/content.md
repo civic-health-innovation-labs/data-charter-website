@@ -73,6 +73,8 @@ The Community Charter on Data and AI has been shortlisted for Outstanding Contri
 The winners are announced at the awards ceremony on Thursday 26 November 2026 at The Vox, Birmingham.
 ~[See the full shortlist](https://the-awards.co.uk/2026/en/page/shortlist)~
 # About the Civic Data Cooperative
+“The CDC has shown how data can improve health, wellbeing, and public services while creating opportunities for innovation and growth.”
+– Cllr Liam Robinson, Liverpool City Region Cabinet Member for Innovation
 The Liverpool City Region Civic Data Cooperative (CDC) was a five-year programme set up in 2020 by the Liverpool City Region Combined Authority and the University of Liverpool.
 Its aim was to improve how civic data is used to support the health, wellbeing and prosperity of local communities — building a model of secure data infrastructure, problem-led innovation and participatory data stewardship. Alongside this Charter, its work included the LCR Digital Commons and the ~[AI & Us podcast](https://shows.acast.com/ai-us-the-future-in-our-hands)~.
 The CDC’s funding concludes in 2026. Its work continues through the ~[Civic Health Innovation Labs](https://www.liverpool.ac.uk/civic-health-innovation-labs/)~ and the new LCR Civic HealthTech Innovation Zone.

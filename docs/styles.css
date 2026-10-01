@@ -941,7 +941,6 @@ body.menu-open { overflow: hidden; }
 @media (min-width: 880px) {
   .cdc { grid-template-columns: 1.4fr 1fr; }
 }
-.news + .cdc { border-top: 1px solid rgba(39, 66, 113, 0.10); }
 .cdc-card {
   background: var(--white);
   border: 2px solid var(--blue);
