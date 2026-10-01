@@ -67,6 +67,16 @@ The Assembly was set up by the ~[LCR Civic Data Cooperative \(CDC\)](https://ci
 Learn more about the Assembly process through the ~[Full Report and Charter](https://livrepository.liverpool.ac.uk/3193485/)~ written by Dr Emily Rempel and the ~[Independent Evaluation Report](https://civicdatacooperative.com/app/uploads/2025/07/Evaluation-Report-v3.pdf)~  written by Anna Beckett.
 # Future of the Charter and its’ impact
 Creating the Charter is only part of the job in making AI work for the region. A biannual review will be completed, with the first happening mid-2027. That means understanding if the Charter is an effective social license on data and AI use. 
+# About the Civic Data Cooperative
+The Liverpool City Region Civic Data Cooperative (CDC) was a five-year programme set up in 2020 by the Liverpool City Region Combined Authority and the University of Liverpool.
+Its aim was to improve how civic data is used to support the health, wellbeing and prosperity of local communities — building a model of secure data infrastructure, problem-led innovation and participatory data stewardship. Alongside this Charter, its work included the LCR Digital Commons and the ~[AI & Us podcast](https://shows.acast.com/ai-us-the-future-in-our-hands)~.
+The CDC’s funding concludes in 2026. Its work continues through the ~[Civic Health Innovation Labs](https://www.liverpool.ac.uk/civic-health-innovation-labs/)~ and the new LCR Civic HealthTech Innovation Zone.
+Three strands of work:
+- Secure, privacy-preserving data infrastructure
+- Public service innovation, co-designed with services
+- Public participation in data and AI governance
+
+~[Visit the CDC archive](https://www.liverpool.ac.uk/civic-health-innovation-labs/research/completed-projects/cdc/)~
 
 ---
 # QUOTES FOR INCLUSION ACROSS THE PAGE

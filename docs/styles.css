@@ -855,3 +855,49 @@ body.menu-open { overflow: hidden; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== About the CDC ===== */
+.cdc {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .cdc { grid-template-columns: 1.4fr 1fr; }
+}
+.cdc-card {
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 28px;
+  padding: clamp(2rem, 3vw, 3rem);
+}
+.cdc-card-logo {
+  width: min(220px, 70%);
+  margin: 0 0 2rem;
+}
+.cdc-card .cta-eyebrow { color: var(--teal); }
+.cdc-strands {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.cdc-strands li {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  font-weight: 600;
+  color: var(--blue);
+  line-height: 1.35;
+}
+.cdc-strands .petal {
+  flex: none;
+  width: 34px;
+  height: 16px;
+}
+.cdc-card .cta-button { background: var(--blue); color: var(--white); }
+.cdc-card .cta-button:hover { background: var(--teal); color: var(--white); }
