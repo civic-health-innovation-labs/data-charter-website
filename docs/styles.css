@@ -366,7 +366,7 @@ body.menu-open { overflow: hidden; }
 
 /* ===== Principles ===== */
 .principles {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 .section-head {
@@ -374,61 +374,72 @@ body.menu-open { overflow: hidden; }
   margin-bottom: clamp(3rem, 6vw, 5rem);
 }
 
+/* Card grid: 1 / 2 / 3 per row */
 .principle-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  gap: clamp(1.25rem, 2vw, 2rem);
+  grid-template-columns: 1fr;
+  gap: clamp(1.25rem, 2vw, 1.75rem);
+}
+@media (min-width: 700px) {
+  .principle-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (min-width: 1040px) {
+  .principle-list { grid-template-columns: repeat(3, 1fr); }
 }
 
 .principle {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.25rem;
-  padding: clamp(1.75rem, 3vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: clamp(1.5rem, 2.2vw, 2rem);
   border-radius: 28px;
   background: var(--white);
+  border-top: 5px solid var(--blue-soft);
   box-shadow: 0 1px 0 rgba(39,66,113,0.04),
               0 30px 60px -40px rgba(39,66,113,0.18);
   transition: transform .5s var(--ease), box-shadow .5s var(--ease);
 }
 .principle:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
   box-shadow: 0 1px 0 rgba(39,66,113,0.04),
               0 40px 70px -40px rgba(39,66,113,0.25);
 }
-@media (min-width: 720px) {
-  .principle {
-    grid-template-columns: 220px 1fr;
-    gap: 2.5rem;
-    align-items: start;
-  }
-}
 
+/* Number badge in the CDC petal shape (see .petal) */
 .principle-number {
-  position: relative;
-  display: flex; align-items: center;
-  font-weight: 700;
-  font-size: clamp(3.5rem, 7vw, 5.5rem);
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  aspect-ratio: 2.1 / 1;
+  align-self: flex-start;
+  flex: none;
+  margin-bottom: 1.1rem;
+  border-radius: 0 47.6% 0 47.6% / 0 100% 0 100%;
+  background: var(--blue-soft);
   color: var(--blue);
+  font-weight: 700;
+  font-size: 1.35rem;
+  line-height: 1;
 }
-.principle-number::before {
-  content: "";
-  position: absolute;
-  left: -10px; top: 50%;
-  transform: translateY(-50%);
-  width: 126px; height: 60px;
-  border-radius: 0 60px 0 60px;
-  z-index: 0;
-}
-.principle-number span { position: relative; z-index: 1; }
 
-.principle[data-color="blue"]   .principle-number::before { background: var(--blue-soft); }
-.principle[data-color="blush"]  .principle-number::before { background: var(--blush-soft); }
-.principle[data-color="yellow"] .principle-number::before { background: var(--yellow-soft); }
-.principle[data-color="teal"]   .principle-number::before { background: var(--teal-soft); }
+.principle h3 {
+  font-size: clamp(1.35rem, 1.9vw, 1.65rem);
+  margin-bottom: 0.5em;
+}
+
+.principle[data-color="blue"]   .principle-number { background: var(--blue-soft); color: var(--blue); }
+.principle[data-color="blush"]  .principle-number { background: var(--blush-soft); color: #a64a4a; }
+.principle[data-color="yellow"] .principle-number { background: var(--yellow-soft); color: #875e10; }
+.principle[data-color="teal"]   .principle-number { background: var(--teal-soft); color: #036971; }
+
+.principle[data-color="blue"]   { border-top-color: var(--blue); }
+.principle[data-color="blush"]  { border-top-color: var(--blush); }
+.principle[data-color="yellow"] { border-top-color: var(--yellow); }
+.principle[data-color="teal"]   { border-top-color: var(--teal); }
 
 .principle[data-color="blue"]   h3 { color: var(--blue); }
 .principle[data-color="blush"]  h3 { color: #c46868; }
@@ -436,13 +447,16 @@ body.menu-open { overflow: hidden; }
 .principle[data-color="teal"]   h3 { color: #03808a; }
 
 .principle-lead {
-  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  font-size: 1.02rem;
+  line-height: 1.55;
   color: var(--blue-deep);
   font-weight: 600;
+  margin-bottom: 1.25rem;
 }
 
 .principle-detail {
-  margin-top: 1rem;
+  margin-top: auto;
+  align-self: flex-start;
 }
 .principle-detail > summary {
   display: inline-flex;
@@ -486,6 +500,7 @@ body.menu-open { overflow: hidden; }
 .principle-detail > p {
   margin-top: 1.1rem;
   margin-bottom: 0;
+  font-size: 0.95rem;
 }
 
 /* Tint the pill per principle accent colour */
@@ -495,6 +510,16 @@ body.menu-open { overflow: hidden; }
 .principle[data-color="yellow"] .principle-detail > summary:hover { background: rgba(255,202,102,0.45); }
 .principle[data-color="teal"]   .principle-detail > summary { background: rgba(4,178,191,0.15); color: #036971; }
 .principle[data-color="teal"]   .principle-detail > summary:hover { background: rgba(4,178,191,0.28); }
+
+/* Closing summary card — sits in the grid but is not a principle */
+.principle-summary {
+  background: var(--blue);
+  border-top-color: var(--yellow);
+  list-style: none;
+}
+.principle-summary .principle-number { background: var(--yellow); }
+.principle-summary h3 { color: var(--yellow); }
+.principle-summary .principle-lead { color: var(--white); margin-bottom: 0; }
 
 /* ===== Story (image + text) ===== */
 .story {
@@ -913,3 +938,49 @@ body.menu-open { overflow: hidden; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ===== About the CDC ===== */
+.cdc {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+}
+@media (min-width: 880px) {
+  .cdc { grid-template-columns: 1.4fr 1fr; }
+}
+.cdc-card {
+  background: var(--white);
+  border: 2px solid var(--blue);
+  border-radius: 28px;
+  padding: clamp(2rem, 3vw, 3rem);
+}
+.cdc-card-logo {
+  width: min(220px, 70%);
+  margin: 0 0 2rem;
+}
+.cdc-card .cta-eyebrow { color: var(--teal); }
+.cdc-strands {
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+.cdc-strands li {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  font-weight: 600;
+  color: var(--blue);
+  line-height: 1.35;
+}
+.cdc-strands .petal {
+  flex: none;
+  width: 34px;
+  height: 16px;
+}
+.cdc-card .cta-button { background: var(--blue); color: var(--white); }
+.cdc-card .cta-button:hover { background: var(--teal); color: var(--white); }
